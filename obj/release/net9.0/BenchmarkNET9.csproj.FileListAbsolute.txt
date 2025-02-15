@@ -83,3 +83,4 @@ C:\Users\ayman\source\repos\BenchmarkNET9\obj\release\net9.0\refint\BenchmarkNET
 C:\Users\ayman\source\repos\BenchmarkNET9\obj\release\net9.0\BenchmarkNET9.pdb
 C:\Users\ayman\source\repos\BenchmarkNET9\obj\release\net9.0\BenchmarkNET9.genruntimeconfig.cache
 C:\Users\ayman\source\repos\BenchmarkNET9\obj\release\net9.0\ref\BenchmarkNET9.dll
+C:\Users\ayman\source\repos\BenchmarkNET9\obj\release\net9.0\BenchmarkNET9.sourcelink.json
