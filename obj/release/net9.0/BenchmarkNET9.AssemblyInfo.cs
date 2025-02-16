@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BenchmarkNET9")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca7c4f6e530cfaef9de9097cd0532186f9e795ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13650740a51d3485447a75940aaf23f6f820ea82")]
 [assembly: System.Reflection.AssemblyProductAttribute("BenchmarkNET9")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BenchmarkNET9")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
