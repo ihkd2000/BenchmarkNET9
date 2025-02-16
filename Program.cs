@@ -38,17 +38,19 @@ namespace BenchmarkNET9
         }
 
         [Benchmark(Baseline = true)]
-        public void IEnumerableForeach()
+        public decimal IEnumerableForeach()
         {
             decimal sum = 0;
             foreach (var obj in _objects)
             {
                 sum += obj.CalculatedValue; // Access a property to simulate real-world usage
             }
+
+            return sum;
         }
 
         [Benchmark]
-        public void IEnumeratorManual()
+        public decimal IEnumeratorManual()
         {
             decimal sum = 0;
             using var enumerator = _objects.GetEnumerator();
@@ -57,6 +59,8 @@ namespace BenchmarkNET9
                 var obj = enumerator.Current;
                 sum += obj.CalculatedValue; // Access a property
             }
+
+            return sum;
         }
 
 
@@ -113,26 +117,30 @@ namespace BenchmarkNET9
 
         public IEnumerableVsEnumeratorBenchmark()
         {
-            _productPrices = new List<decimal> { 19.99m, 34.50m, 50.00m, 12.75m, 99.99m, 14.30m, 5.99m, 20.15m };
+            _productPrices = Enumerable.Range(0, 10000).Select(x => (decimal)x).ToList();
         }
 
 
 
         [Benchmark]
-        public void TestIEnumerableIteration()
+        public decimal TestIEnumerableIteration()
         {
+            var sum = 0m;
             IEnumerable<decimal> priceCollection = _productPrices;
             foreach (decimal price in priceCollection)
-                Debug.WriteLine(price);
+                sum += price;
+            return sum;
         }
 
 
         [Benchmark]
-        public void TestIEnumeratorIteration()
+        public decimal TestIEnumeratorIteration()
         {
+            var sum = 0m;
             IEnumerator<decimal> priceEnumerator = _productPrices.GetEnumerator();
             while (priceEnumerator.MoveNext())
-                Debug.WriteLine(priceEnumerator.Current);
+                sum += priceEnumerator.Current;
+            return sum;
         }
 
     }
